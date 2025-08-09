@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Romance Predictor — Useless Hackathon Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>💘 Romance Predictor — Useless & Charming</h1>
+      <p class="lead">Drop two profiles, click the big button, and let destiny (and some strings) decide.</p>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <label for="a-name">Name</label>
+        <input id="a-name" type="text" value="Alex" />
+        <label for="a-bio" style="margin-top:10px">Short bio</label>
+        <textarea id="a-bio">Loves coffee and adventures</textarea>
+        <label for="a-interests" style="margin-top:10px">Interests (comma separated)</label>
+        <input id="a-interests" type="text" value="coffee,travel,music" />
+        <label style="margin-top:10px">Birthdate</label>
+        <input id="a-dob" type="date" value="1995-05-12" />
+      </div>
+
+      <div class="card">
+        <label for="b-name">Name</label>
+        <input id="b-name" type="text" value="Jamie" />
+        <label for="b-bio" style="margin-top:10px">Short bio</label>
+        <textarea id="b-bio">Cat person, indie films, lazy Sundays</textarea>
+        <label for="b-interests" style="margin-top:10px">Interests (comma separated)</label>
+        <input id="b-interests" type="text" value="cats,films,coffee" />
+        <label style="margin-top:10px">Birthdate</label>
+        <input id="b-dob" type="date" value="1996-09-08" />
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="calc" class="primary">Calculate Chemistry</button>
+      <button id="randomize" title="Randomize examples" style="background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:var(--muted);cursor:pointer">Randomize</button>
+    </div>
+
+    <div id="result" class="result" style="display:none">
+      <div id="scoreText" style="font-size:20px;font-weight:800">Compatibility: —</div>
+      <div class="meter" aria-hidden="true">
+        <div id="meterFill" class="meter-fill">0%</div>
+      </div>
+      <div id="explain" class="muted">—</div>
+      <div id="pickup" class="pickup">—</div>
+      <div id="doomed" class="doomed" style="display:none">⚠ Doomed by Destiny!</div>
+    </div>
+
+    <footer>
+      Tip: results are intentionally silly and deterministic — same inputs → same result. Keep it playful!
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Death Prediction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Start Screen -->
+  <div class="start-screen">
+    <h1 class="glitch" data-text="☠ Summon Your Fate ☠">☠ Summon Your Fate ☠</h1>
+    <button id="startBtn">Enter the Darkness</button>
+  </div>
+
+  <!-- Prediction Form -->
+  <div class="container hidden" id="predictionContainer">
+    <h1 class="glitch" data-text="☠ Death Prediction ☠">☠ Death Prediction ☠</h1>
+    <p class="tagline">Enter your birthday and mood… let the darkness decide.</p>
+
+    <div class="input-group">
+      <label>Birthday: <input type="date" id="birthday" /></label>
+      <label>Mood:
+        <select id="mood">
+          <option value="calm">Calm</option>
+          <option value="sad">Sad</option>
+          <option value="angry">Angry</option>
+          <option value="fearful">Fearful</option>
+        </select>
+      </label>
+      <button id="predictBtn">Summon Fate</button>
+    </div>
+
+    <div class="result">
+      <p id="deathDate" class="flicker"></p>
+      <p id="deathCause"></p>
+      <p id="daysRemaining"></p>
+    </div>
+  </div>
+
+  <audio id="scareSound" src="https://www.myinstants.com/media/sounds/horror-sound.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body, html {
+  margin: 0; padding: 0; height: 100%;
+  background: linear-gradient(135deg, #240046, #5a189a);
+  font-family: 'Fredoka One', cursive;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(50, 0, 100, 0.85);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow:
+    0 0 30px #9f7aea,
+    0 0 60px #be95c4,
+    inset 0 0 40px #7b2ff7;
+  width: 320px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #d4bfff;
+}
+
+.loader-circle {
+  margin: 0 auto 30px;
+  width: 120px;
+  height: 120px;
+  border: 15px solid rgba(255, 255, 255, 0.1);
+  border-top: 15px solid #9f7aea;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+  box-shadow: 0 0 20px #be95c4;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#progressText {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 8px #d4bfff;
+}
+
+#funMessage {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  min-height: 30px;
+  color: #c4b5fd;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#closeBtn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #7b2ff7;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 0 15px #9f7aea;
+  transition: background-color 0.3s ease;
+}
+
+#closeBtn:hover {
+  background: #be95c4;
+  color: #240046;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .container {
+    width: 90vw;
+  }
+}

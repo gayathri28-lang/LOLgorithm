@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #2c003e, #7e00a8);
+  color: #f0e6ff;
+  font-family: 'Fredoka One', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hub-container {
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  background: rgba(40, 0, 80, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow:
+    0 0 20px #a259ff,
+    0 0 40px #7e00a8,
+    0 0 60px #5a0099;
+}
+
+.logo {
+  font-size: 3.5rem;
+  color: #ffd700;
+  text-shadow:
+    0 0 10px #ffd700,
+    0 0 20px #ffb700,
+    0 0 30px #ffae00;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #e6ccff;
+  font-style: italic;
+  text-shadow: 0 0 5px #a259ff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.project-btn {
+  background: #4b0082;
+  color: #ffda44;
+  border: 2px solid #ffd700;
+  padding: 18px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow:
+    0 0 10px #ffd700,
+    inset 0 0 8px #ffda44;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.project-btn:hover {
+  background: #7e00a8;
+  color: #fff3b0;
+  border-color: #fff3b0;
+  box-shadow:
+    0 0 15px #fff3b0,
+    inset 0 0 12px #fff3b0;
+  transform: translateY(-7px) scale(1.05);
+}
+
+.project-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ffd700;
+  color: #4b0082;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 0 15px #ffd700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #fff3b0;
+  color: #7e00a8;
+  box-shadow: 0 0 25px #fff3b0;
+}
+
+#projectFrame {
+  width: 90vw;
+  height: 80vh;
+  border: none;
+  margin-top: 30px;
+  background: #2c003e;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #7e00a8;
+}
+
+.hidden {
+  display: none;
+}

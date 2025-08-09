@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+body {
+  background: radial-gradient(circle at center, #000000 0%, #1a0000 100%);
+  color: #ff0000;
+  font-family: 'Creepster', cursive;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid red;
+  border-radius: 15px;
+  box-shadow: 0 0 30px red;
+  max-width: 400px;
+  width: 90%;
+}
+
+.glitch {
+  position: relative;
+  font-size: 2rem;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; }
+  20% { text-shadow: -2px -2px darkred; }
+  40% { text-shadow: 2px -2px crimson; }
+  60% { text-shadow: -2px 2px red; }
+  80% { text-shadow: 2px 2px darkred; }
+  100% { text-shadow: none; }
+}
+
+.flicker {
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0; }
+}
+
+.input-group {
+  margin: 20px 0;
+}
+
+input, select, button {
+  font-family: 'Creepster', cursive;
+  font-size: 1rem;
+  padding: 5px;
+  margin: 5px;
+  background: black;
+  border: 1px solid red;
+  color: red;
+  border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: red;
+  color: black;
+}
+
+.start-screen {
+  text-align: center;
+  max-width: 400px;
+}
+
+#startBtn {
+  font-family: 'Creepster', cursive;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background: black;
+  color: red;
+  border: 2px solid red;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+#startBtn:hover {
+  background: red;
+  color: black;
+}
+
+/* Flicker screen effect */
+.flash {
+  animation: flashEffect 0.3s ease-in-out;
+}
+
+@keyframes flashEffect {
+  0% { background: white; }
+  100% { background: black; }
+}
